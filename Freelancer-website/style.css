@@ -17,6 +17,20 @@ html {
   box-sizing: inherit;
 }
 
+.button {
+  background-color: var(--dark);
+  padding: 0.5rem 3rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 0.5rem;
+  /* font-weight: 700; */
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border: none;
+  color: var(--white);
+}
+
 body {
   font-family: var(--mainFont);
 }
@@ -41,4 +55,41 @@ body {
   text-decoration: none;
   font-size: 1.4rem;
   margin-bottom: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .main-navigation a {
+    margin-bottom: 0;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.7);
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.hero-content {
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+.hero-content i {
+  padding: 0 0.3rem 0 0;
+  font-size: 1.4rem;
+  color: var(--primary);
 }
