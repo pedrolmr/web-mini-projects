@@ -12,6 +12,10 @@ html {
 body {
   font-family: $mainFont;
 }
+
+img {
+  max-width: 100%;
+}
 .container {
   max-width: 1100px;
   width: 90%;
@@ -35,7 +39,8 @@ body {
     position: absolute;
     right: 0;
     padding: 1rem;
-    max-width: 400px;
+    width: 400px;
+    background-color: $white;
 
     .button {
       @include button($secondary);
@@ -83,5 +88,110 @@ body {
         background-position: center center;
       }
     }
+  }
+}
+.bar {
+  min-height: 5rem;
+  background: $secondary;
+  color: $white;
+  @include gradient($secondary, $alternative);
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    padding: 1.4rem 0;
+
+    @include desktop() {
+      flex-direction: row;
+    }
+    .icon {
+      @include desktop() {
+        flex: 0 0 33.3%;
+      }
+
+      &.icon1 {
+        @include bg-icon(icon1);
+      }
+
+      &.icon2 {
+        @include bg-icon(icon2);
+      }
+
+      &.icon3 {
+        @include bg-icon(icon3);
+      }
+    }
+  }
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5rem;
+
+  .course {
+    flex: 0 0 calc(50% - 1rem);
+    @include tablet {
+      flex: 0 0 calc(33.3% - 1rem);
+    }
+
+    @include desktop {
+      flex: 0 0 calc(25% - 1rem);
+    }
+    background-color: $white;
+    margin-bottom: 1rem;
+    border: 1px solid darken($gray, 5%);
+    .course-info {
+      padding: 1rem;
+      h4 {
+        margin: 0;
+        font-size: 1.2rem;
+      }
+      .price {
+        display: flex;
+        justify-content: space-between;
+
+        .regular {
+          text-decoration: line-through;
+        }
+        .offer {
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+      .button {
+        @include button($primary);
+      }
+    }
+  }
+}
+.footer {
+  border-top: 1px solid darken($gray, 5%);
+  margin-top: 1rem;
+  padding-top: 2rem;
+
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  flex: 1;
+  @include desktop {
+    flex: 0 0 calc(30% - 1rem);
+  }
+  a {
+    color: $black;
+    text-decoration: none;
+    margin-bottom: 0.4rem;
   }
 }
