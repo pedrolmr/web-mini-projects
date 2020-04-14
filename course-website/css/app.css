@@ -79,6 +79,12 @@ body {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .hero .hero-content form {
+    width: 40%;
+  }
+}
+
 .hero .hero-content form input[type='text'] {
   width: 100%;
   height: 3rem;
