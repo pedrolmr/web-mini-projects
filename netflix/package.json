@@ -8,10 +8,6 @@
   },
   "author": "",
   "license": "ISC",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "dependencies": {
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
