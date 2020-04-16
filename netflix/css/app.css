@@ -9,6 +9,14 @@ html {
   box-sizing: inherit;
 }
 
+.alert {
+  color: #e87c03;
+  display: block;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 body {
   background-color: #000;
   color: #8c8c8c;
@@ -97,6 +105,11 @@ form .field label {
   transition: font-size 0.2s ease, top 0.2s ease;
 }
 
+form .field label.valid {
+  font-size: 0.6rem;
+  top: 0.5rem;
+}
+
 form .field input {
   padding: 1.3rem 1rem 0.9rem 1rem;
   -webkit-box-flex: 1;
@@ -105,6 +118,8 @@ form .field input {
   background-color: #323232;
   border: none;
   border-radius: 5px;
+  color: #ffffff;
+  font-size: 1.2rem;
 }
 
 form .field input:focus {
